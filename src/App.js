@@ -33,12 +33,12 @@ function App() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              {userData.name}
+              이름 : {userData.name}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              { userData.jobTitle }
-              { userData.email }<br />
-              { userData.phoneNo} 
+              직업 : { userData.jobTitle }<br />
+              이메일 : { userData.email }<br />
+              전화번호 : { userData.phoneNo}<br /> 
             </Typography>
           </CardContent>
         </CardActionArea>
