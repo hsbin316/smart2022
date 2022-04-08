@@ -9,10 +9,10 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import WeatherCard from "./components/WeatherCard";
 import Grid from '@mui/material/Grid';
 
 import {cityLatLon} from './dataset/WeatherData';
+import WeatherCard from "./components/WeatherCard";
 import UserCardList from './components/UserCardList';
 import {makeUserDatas} from './Utils';
 
@@ -83,6 +83,8 @@ function App() {
             </Select>
         </FormControl>
         <Grid container spacing={{ xs: 2, md: 3}} columns={{ xs: 4, sm: 4, md: 12}}>
+          <WeatherCard weatherData={weatherData} apiError={apiError} />
+          <WeatherCard weatherData={weatherData} apiError={apiError} />
           <WeatherCard weatherData={weatherData} apiError={apiError} />
         </Grid>
         <Switch

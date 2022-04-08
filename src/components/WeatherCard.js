@@ -1,5 +1,7 @@
+import React,{uesState, useEffect} from 'react';
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
+import Grid from '@mui/material/Grid';
 import {weather_mapping_data} from "../dataset/WeatherData";
 
 function WeatherCard(props) {
@@ -10,7 +12,7 @@ function WeatherCard(props) {
         const parseWeatherData = weather_mapping_data[main] ? weather_mapping_data[main] : weather_mapping_data['Mist'];
 
         const iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
-        return <Grid item xs={1} sm={2} md={4} key={idx}> 
+        return <Grid item xs={1} sm={2} md={4}> 
             <Typography>{`현재날씨: ${parseWeatherData.name}`}</Typography>
             <parseWeatherData.icon sx={{fontSize:125,color:'red'}} />
             <img src={iconUrl} alt="현재날씨 아이콘" />
