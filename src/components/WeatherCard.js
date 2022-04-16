@@ -11,11 +11,13 @@ import {weather_mapping_data, cityLatLon} from "../dataset/WeatherData";
 
 function WeatherCard(props) {
     const {id} = props;
+    const {cityName} = props;
     // const defaultCityName = localStorage.getItem(id+'_city') || "안양";
-    const defaultCityName = props.cityName;
+    const defaultCityName = localStorage.getItem(id+'_city') || cityName;
     const [weatherData, setWeatherData] = useState(null);
     const [apiError, setApiError] = useState(null);
-    const findCity = cityLatLon.find(data=> data.name === defaultCityName);
+    // const findCity = cityLatLon.find(data=> data.name === defaultCityName);
+    const findCity = cityLatLon.find(data=> data.name === cityName);
     const [selectedCityData, setSelectedCityData] = useState(findCity);
     
     
@@ -23,10 +25,9 @@ function WeatherCard(props) {
     const selectHandleChange = (event) => {
         console.log(event.target.value);
         const cityName = event.target.value;
-        const findCityLatLon = cityLatLon.find(element => element.name === cityName)
+        const findCityLatLon = cityLatLon.find(data => data.name === cityName)
+        localStorage.setItem(id+'_city',findCityLatLon.name);
         setSelectedCityData(findCityLatLon)
-        localStorage.setItem(id+'_city',cityName);
-        // localStorage.setItem(cityName+'_city',cityName);
     }
 
     useEffect(() => {

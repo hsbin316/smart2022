@@ -40,11 +40,11 @@ function App() {
     }}>
       <Container maxWidth="lg">
         <Grid container spacing={{ xs: 2, md: 3}} columns={{ xs: 4, sm: 4, md: 12}}>
-          {
+          {/* {
             [1,2,3,4,5,6,7,8,9].map((no)=> {
               return <WeatherCard id={no} />
             })
-          }
+          } */}
           <WeatherCard cityName="안양" />
           <WeatherCard cityName="서울" />
           <WeatherCard cityName="부산" />
