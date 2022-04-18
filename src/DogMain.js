@@ -1,5 +1,5 @@
-import { faker } from '@faker-js/faker';
-import dog from './dog.jpg';
+import { faker } from '@faker-js/faker';        // faker-js import처리
+import dog from './dog.jpg';                    // dog.jpg import처리
 
   const testData = [
     {
@@ -16,19 +16,19 @@ import dog from './dog.jpg';
 
 function DogMain() {
     const h1Element = <h1>H1 제목 태그 입니다.</h1>;
-    const imgElement = <img src={dog} className="App-logo" alt="dog" />;
+    const imgElement = <img src={dog} className="App-logo" alt="dog" />;  
     return (
         <>
-            { h1Element }
-            { imgElement }
+            { h1Element }                                                     {/*  h1Element 호출 */}
+            { imgElement }                                                    {/*  imgElement 호출 */}
             <p>
-            Edit <code>src/App.js</code> and save to reload.
+                한글로 바꿔보세요. <code>src/App.js</code> and save to reload.
             </p>
             {testData.map((contents)=>{
                 return <div>
-                    <img src={faker.image.avatar()} alt="avatar"></img>
-                    {contents.text}
-                    <img src={faker.image.avatar()} alt="avata"></img>
+                    <img src={faker.image.avatar()} alt="avatar"></img>       {/*  faker-js를 이용한 가짜 아바타 생성 */}
+                    {contents.text}                                           {/* testData의 text호출 */}
+                    <img src={faker.image.avatar()} alt="avatar"></img>       {/*  faker-js를 이용한 가짜 아바타 생성 */}
                 </div>
             })}
         </>
