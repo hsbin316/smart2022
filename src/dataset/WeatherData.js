@@ -4,9 +4,9 @@ import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import CloudIcon from '@mui/icons-material/Cloud';
-import BlurCircularIcon from '@mui/icons-material/BlurCircular';
+import BlurCircularIcon from '@mui/icons-material/BlurCircular';            // 아이콘 import처리
 
-export const cityLatLon =[
+export const cityLatLon =[                                                  // 이름,위도,경도 값 저장
     { name: "서울", lat: 37.5665, lon: 127.9780},
     { name: "안양", lat: 37.3943, lon: 126.9568},
     { name: "부산", lat: 35.1796, lon: 129.0756},
@@ -17,7 +17,7 @@ export const cityLatLon =[
     { name: "파리", lat: 48.8566, lon: 2.3522}
 ]
 
-export const weather_mapping_data = {
+export const weather_mapping_data = {                                       // 각 날씨별 이름과 아이콘 값 저장
     Thunderstorm : {
         name: "폭우",
         icon: ThunderstormIcon

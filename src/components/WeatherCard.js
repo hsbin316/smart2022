@@ -7,7 +7,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import axios from 'axios';
 
-import {weather_mapping_data, cityLatLon} from "../dataset/WeatherData";
+import {weather_mapping_data, cityLatLon} from "../dataset/WeatherData";    // weatherData import 처리
 
 function WeatherCard(props) {
     const {id} = props;
@@ -79,7 +79,7 @@ function WeatherCard(props) {
         </Grid>
     }
 
-    return<>
+    return<>                                                                {/* 삼항연산자를 이용하여 날씨정보가 있으면 makeWeatherInfo()를 리턴 없으면 날씨정보 없음 리턴 */}
         {apiError ?
             <Typography>{apiError.message}</Typography>
             :
@@ -91,4 +91,4 @@ function WeatherCard(props) {
     </>
 }
 
-export default WeatherCard;
+export default WeatherCard;                                                 // WeatherCard export 처리

@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';        // faker-js import처리
 import dog from './dog.jpg';                    // dog.jpg import처리
 
-  const testData = [
+  const testData = [                            // json구조
     {
       text : "정기회의 회기는 100일을, 임시회의 회기는 30일을 초과할 수 없다.",
       imgUrl: "https://i.natgeofe.com/n/3faa2b6a-f351-4995-8fff-36d145116882/domestic-dog_16x9.jpg",
