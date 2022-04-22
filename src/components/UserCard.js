@@ -14,7 +14,7 @@ function UserCard(props) {
     const changeFontColor = () =>{
       setFontColor(`rgb(${getRandomInt(0,255)},${getRandomInt(0,255)},${getRandomInt(0,255)})`)
     }
-    setInterval(changeFontColor,1000);
+    setInterval(changeFontColor,5000);
   },[])
     return <div key={idx}>
       <Card sx={{ maxWidth: 345 }}>

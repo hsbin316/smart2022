@@ -13,11 +13,11 @@ function WeatherCard(props) {
     const {id} = props;
     const {cityName} = props;
     // const defaultCityName = localStorage.getItem(id+'_city') || "안양";
-    const defaultCityName = localStorage.getItem(id+'_city') || cityName;
-    const [weatherData, setWeatherData] = useState(null);
+    const defaultCityName = localStorage.getItem(id+'_city') || cityName;       // defaultCityname 설정 (현재 사용 x)
+    const [weatherData, setWeatherData] = useState(null);                       
     const [apiError, setApiError] = useState(null);
     // const findCity = cityLatLon.find(data=> data.name === defaultCityName);
-    const findCity = cityLatLon.find(data=> data.name === cityName);
+    const findCity = cityLatLon.find(data=> data.name === cityName); 
     const [selectedCityData, setSelectedCityData] = useState(findCity);
     
     
@@ -58,7 +58,7 @@ function WeatherCard(props) {
         const parseWeatherData = weather_mapping_data[main] ? weather_mapping_data[main] : weather_mapping_data['Mist'];
 
         const iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
-        return <Grid item xs={1} sm={2} md={4}>
+        return <Grid container direction="column" justifyContent="center" alignItems="baseline">
             <FormControl>
                 <InputLabel id="selected-city-label">도시</InputLabel>
                 <Select
