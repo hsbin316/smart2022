@@ -9,6 +9,7 @@ import Grid from '@mui/material/Grid';
 
 import WeatherCard from "./components/WeatherCard";                         // WeatherCard import처리
 import UserCardList from './components/UserCardList';                       // UserCard import처리
+import TopBar from './components/TopBar';
 import {makeUserDatas} from './Utils';                                      // UserDatas import처리
 
 
@@ -38,16 +39,17 @@ function App() {
       color: 'text.primary',
       p: 1,
     }}>
+      <TopBar />
       <Container maxWidth="lg">
         <Grid container spacing={{ xs: 2, md: 3}} columns={{ xs: 4, sm: 4, md: 12}}>      {/*weatherCard호출 및 Grid지정*/}
-          {/* {
+          {
             [1,2,3,4,5,6,7,8,9].map((no)=> {
               return <WeatherCard id={no} />
             })
-          } */}
-          <WeatherCard cityName="안양" />
+          }
+          {/* <WeatherCard cityName="안양" />
           <WeatherCard cityName="서울" />
-          <WeatherCard cityName="부산" />
+          <WeatherCard cityName="부산" /> */}
         </Grid>
         <Switch
           checked={useDarkMode}
